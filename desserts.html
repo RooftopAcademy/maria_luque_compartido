@@ -8,6 +8,7 @@
     <meta name="viweport" content="width=device-width, user-scalable=no, 
         initial-scale= 1.0, maximum-scale=1.0, minimum-scale=1.0">
     <script src="js/script.js" defer></script>
+    <script src="js/functions-desserts.js" defer></script>
 
 </head>
 
@@ -16,15 +17,15 @@
     <header class="header">
         <img src="img/icono-pasteleria.png" id="logo" />
         <div class="title">
-            <h1 id="header-title"></h1>
+            <h1 id="header-title"> </h1>
         </div>
 
         <div class="">
             <div class="header-usuario d-flex row-center">
-                <a href="login.html"> <img src="img/login.png" style="width: 4rem;height: 4rem;margin-top: 2rem;" /></a>
+                <button type="button" onclick="desplegar_perfil();"> <img src="img/login.png" id="img-usuario"/></button>
                 <h3> USUARIO</h3>
             </div>
-            <div class="header-perfil d-flex col-center ">
+            <div class="header-perfil d-flex col-center " id="header-perfil">
                 <a href="#" class="d-flex col-center " id="aaa">Perfil</a>
                 <a href="login.html" class="d-flex col-center">Logout</a>
                 <a href="#" class="d-flex col-center">Contact US</a>
@@ -35,15 +36,15 @@
     </header>
     <div class="menu d-flex ">
         <div class="menu-buscador d-flex">
-            <div class=" d-flex " style="align-items:flex-end;">
-                <button type="button" class="hamburger" id="hamburger"> <img src="img/icono-menu.png" id="icono-menu" >
+            <div class="menu-hamburger d-flex ">
+                <button type="button" class="hamburger" onclick="desplegar_menu();"> <img src="img/icono-menu.png" id="icono-menu" >
             </div>
             <div class="buscar">
                 <input type="text" class="input" placeholder="Buscar...">
             </div>
         </div>
            
-        <div class="nav d-flex row-center">
+        <div class="nav d-flex row-center" id="nav" >
            
             <a href="#" class="menu-item ">All Deserts</a>
             <a href="#" class="menu-item ">Cakes</a>
@@ -62,6 +63,7 @@
             <a href="#" class="menu-item d-flex col-center">Pancakes</a>
             <a href="#" class="menu-item d-flex col-center">Crumble Cakes</a>
             <a href="#" class="menu-item d-flex col-center">Custards</a>
+            <a href="#" class="menu-item d-flex col-center">Others</a>
 
         </aside>
         <div class="desserts d-flex row-center">
