@@ -8,7 +8,8 @@
     <meta name="viweport" content="width=device-width, user-scalable=no, 
         initial-scale= 1.0, maximum-scale=1.0, minimum-scale=1.0">
     <script src="js/script.js" defer></script>
-    <script src="js/functions-desserts.js" defer></script>
+    <script src="js/events-desserts.js" defer></script>
+    <script src="js/search.js" defer></script>
 
 </head>
 
@@ -22,7 +23,7 @@
 
         <div class="">
             <div class="header-usuario d-flex row-center">
-                <button type="button" onclick="desplegar_perfil();"> <img src="img/login.png" id="img-usuario"/></button>
+                <button type="button" id="btn-perfil"> <img src="img/login.png" id="img-usuario"/></button>
                 <h3> USUARIO</h3>
             </div>
             <div class="header-perfil d-flex col-center " id="header-perfil">
@@ -37,10 +38,10 @@
     <div class="menu d-flex ">
         <div class="menu-buscador d-flex">
             <div class="menu-hamburger d-flex ">
-                <button type="button" class="hamburger" onclick="desplegar_menu();"> <img src="img/icono-menu.png" id="icono-menu" >
+                <button type="button" class="hamburger" id="hamburger"> <img src="img/icono-menu.png" id="icono-menu" >
             </div>
-            <div class="buscar">
-                <input type="text" class="input" placeholder="Buscar...">
+            <div class="search">
+                <input type="text" class="filter" id="filter" placeholder="Buscar..." onkeyup="searchDessert();">
             </div>
         </div>
            
@@ -66,125 +67,166 @@
             <a href="#" class="menu-item d-flex col-center">Others</a>
 
         </aside>
-        <div class="desserts d-flex row-center">
-            <div class="desserts-card" id="pancake">
+        <div class="desserts d-flex row-center" id="desserts-list">
+            <div class="dessert-card" id="pancake">
                 <img src="img/img-desserts/panqueques.jpg">
-                <h4 class="titleCard">Panqueques</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <button class="button">View More </button>
+                <div class="card-body">
+                    <h4 class="titleCard">Panqueques</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <button class="button-card">View More </button>
             </div>
+        </div>
 
-
-            <div class="desserts-card" id="carrot-cupcake">
-                <img src="img/img-desserts/bizcocho-avena-zanahoria-almendra.jpg">
+        <div class="dessert-card" id="carrot-cupcake">
+            <img src="img/img-desserts/bizcocho-avena-zanahoria-almendra.jpg">
+            <div class="card-body">
                 <h4 class="titleCard">Bizcocho de Zanahoria </h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                <button class="button">View More </button>
+                <button class="button-card">View More </button>
             </div>
-            <div class="desserts-card" id="lemon-cupcake">
+        </div>
+
+        <div class="dessert-card" id="lemon-cupcake">
+            <div class="card-body">
                 <img src="img/img-desserts/bizcocho-limon.jpg">
                 <h4 class="titleCard">Bizcocho de Limón</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                <button class="button">View More </button>
+                <button class="button-card">View More </button>
             </div>
-            <div class="desserts-card" id="orange-cupcake">
-                <img src="img/img-desserts/bizcocho-naranja.jpg">
+        </div>
+
+        <div class="dessert-card" id="orange-cupcake">
+            <img src="img/img-desserts/bizcocho-naranja.jpg">
+            <div class="card-body">
                 <h4 class="titleCard">Bizcocho de Naranja</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <button class="button">View More </button>
+                <button class="button-card">View More </button>
             </div>
-            <div class="desserts-card" id="vanilla-cupcake">
-                <img src="img/img-desserts/bizcocho.jpg">
+
+        </div>
+        <div class="dessert-card" id="vanilla-cupcake">
+            <img src="img/img-desserts/bizcocho.jpg">
+            <div class="card-body">
                 <h4 class="titleCard">Bizcocho de Vainilla</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <button class="button">View More </button>
+                <button class="button-card">View More </button>
             </div>
-            <div class="desserts-card" id="cookie-brownie">
-                <img src="img/img-desserts/brownie-galleta.jpg">
+        </div>
+
+        <div class="dessert-card" id="cookie-brownie">
+            <img src="img/img-desserts/brownie-galleta.jpg">
+            <div class="card-body">
                 <h4 class="titleCard">Brownie de Galleta</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <button class="button">View More </button>
+                <button class="button-card">View More </button>
             </div>
-            <div class="desserts-card" id="pear-brownie">
-                <img src="img/img-desserts/brownie-pera.jpg">
+        </div>
+
+        <div class="dessert-card" id="pear-brownie">
+            <img src="img/img-desserts/brownie-pera.jpg">
+            <div class="card-body">
                 <h4 class="titleCard">Brownie de Pera</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                <button class="button">View More </button>
+                <button class="button-card">View More </button>
             </div>
-            <div class="desserts-card" id="banana-brownie">
-                <img src="img/img-desserts/brownie-platano.jpg">
+
+        </div>
+        <div class="dessert-card" id="banana-brownie">
+            <img src="img/img-desserts/brownie-platano.jpg">
+            <div class="card-body">
                 <h4 class="titleCard">Brownie de Plátano</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                <button class="button">View More </button>
+                <button class="button-card">View More </button>
             </div>
-            <div class="desserts-card" id="mango-crumble-cake">
-                <img src="img/img-desserts/crumble-mango.jpg">
+        </div>
+        <div class="dessert-card" id="mango-crumble-cake">
+            <img src="img/img-desserts/crumble-mango.jpg">
+            <div class="card-body">
                 <h4 class="titleCard">Crumble de Mango</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                <button class="button">View More </button>
+                <button class="button-card">View More </button>
             </div>
-            <div class="desserts-card" id="apple-crumble-cake">
-                <img src="img/img-desserts/crumble-manzana.jpg">
+        </div>
+        <div class="dessert-card" id="apple-crumble-cake">
+            <img src="img/img-desserts/crumble-manzana.jpg">
+            <div class="card-body">
                 <h4 class="titleCard">Crumble de Manzana</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                <button class="button">View More </button>
+                <button class="button-card">View More </button>
             </div>
-            <div class="desserts-card" id="coffee-custard">
-                <img src="img/img-desserts/flan-cafe.jpg">
+        </div>
+        <div class="dessert-card" id="coffee-custard">
+            <img src="img/img-desserts/flan-cafe.jpg">
+            <div class="card-body">
                 <h4 class="titleCard">Flan de Café</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                <button class="button">View More </button>
+                <button class="button-card">View More </button>
             </div>
-            <div class="desserts-card" id="chocolate-custard">
-                <img src="img/img-desserts/flan-chocolate.jpg">
+        </div>
+        <div class="dessert-card" id="chocolate-custard">
+            <img src="img/img-desserts/flan-chocolate.jpg">
+            <div class="card-body">
                 <h4 class="titleCard">Flan de Chocolate </h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <button class="button">View More </button>
+                <button class="button-card">View More </button>
             </div>
-            <div class="desserts-card" id="apple-custard">
-                <img src="img/img-desserts/flan-manzana.jpg">
+        </div>
+        <div class="dessert-card" id="apple-custard">
+            <img src="img/img-desserts/flan-manzana.jpg">
+            <div class="card-body">
                 <h4 class="titleCard">Flan de Manzana</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                <button class="button">View More </button>
+                <button class="button-card">View More </button>
             </div>
-            <div class="desserts-card" id="chocolate-mousse">
-                <img src="img/img-desserts/mousse-chocolate.jpg">
+        </div>
+        <div class="dessert-card" id="chocolate-mousse">
+            <img src="img/img-desserts/mousse-chocolate.jpg">
+            <div class="card-body">
                 <h4 class="titleCard">Mousse de Chocolate</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                <button class="button">View More </button>
+                <button class="button-card">View More </button>
             </div>
-            <div class="desserts-card" id="frost-cake">
-                <img src="img/img-desserts/tarta-helada.jpg">
+        </div>
+        <div class="dessert-card" id="frost-cake">
+            <img src="img/img-desserts/tarta-helada.jpg">
+            <div class="card-body">
                 <h4 class="titleCard">Tarta Helada</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                <button class="button">View More </button>
+                <button class="button-card">View More </button>
             </div>
-            <div class="desserts-card" id="apple-cake">
-                <img src="img/img-desserts/tarta-manzana.jpg">
+        </div>
+        <div class="dessert-card" id="apple-cake">
+            <img src="img/img-desserts/tarta-manzana.jpg">
+            <div class="card-body">
                 <h4 class="titleCard">Tarta de Manzana</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                <button class="button">View More </button>
+                <button class="button-card">View More </button>
             </div>
+        </div>
 
-            <div class="desserts-card" id="lemon-marcarpone-cake">
-                <img src="img/img-desserts/tarta-mascarpone-limon.jpg">
+        <div class="dessert-card" id="lemon-marcarpone-cake">
+            <img src="img/img-desserts/tarta-mascarpone-limon.jpg">
+            <div class="card-body">
                 <h4 class="titleCard">Tarta Mascarpone de Limón</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                <button class="button">View More </button>
+                <button class="button-card">View More </button>
             </div>
-            <div class="desserts-card" id="pineapple-cake">
-                <img src="img/img-desserts/tarta-queso-piña.jpg">
+        </div>
+        <div class="dessert-card" id="pineapple-cake">
+            <img src="img/img-desserts/tarta-queso-piña.jpg">
+            <div class="card-body">
                 <h4 class="titleCard">Tarta de Queso y Piña</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <button class="button">View More </button>
+                <button class="button-card">View More </button>
             </div>
-            <div class="desserts-card" id="cheese-cake">
-                <img src="img/img-desserts/tarta-queso.jpg">
+        </div>
+        <div class="dessert-card" id="cheese-cake">
+            <img src="img/img-desserts/tarta-queso.jpg">
+            <div class="card-body">
                 <h4 class="titleCard">Tarta de Queso tradicional</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <button class="button">View More </button>
+                <button class="button-card">View More </button>
             </div>
-
         </div>
     </div>
     <footer class="footer d-flex col-center">
