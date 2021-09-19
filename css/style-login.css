@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Montserrat&family=Prata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bg-img {
+    /* background: url('../img/fondo-login2.jpg'); */
+    background-image: radial-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/fondo-login2.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    width: 60%;
+    height: 40%;
+    padding: 60px 32px;
+    background: rgba(253, 84, 6, 0.255);
+    /* background: rgba(255, 255, 255, 0.04) */
+    box-shadow: -1px 4px 28px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 2rem;
+}
+
+.title {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    background: none;
+    padding: 0%;
+    text-align: center;
+    font-family: 'Ephesis', cursive;
+    font-size: 3.4rem;
+    color: #F2EADC;
+    font-weight: 400;
+    text-shadow: 2px 2px 3px black;
+}
+
+.content header {
+    color: white;
+    font-size: 3.5rem;
+    font-weight: 600;
+    font-family: 'Baloo 2', cursive;
+}
+
+.field {
+    position: relative;
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.field input {
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #222;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.space {
+    margin-top: 3rem;
+}
+
+.button-login {
+    display: block;
+    width: 50%;
+    height: 4rem;
+    border-radius: 8px;
+    margin: 0 auto;
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: 'Baloo 2', cursive;
+    box-shadow: 6px 5px 24px rgb(0 0 0 / 50%);
+    background-color: rgba(178, 88, 19, 0.7);
+    text-align: center;
+    color: bisque;
+    margin-top: 3rem;
+}
+
+#usuario {
+    font-size: 1.5rem;
+}
+
+#contraseña {
+    font-size: 1.5rem;
+}
+
+.footer {
+    align-self: flex-end;
+    background-color: #EEC170;
+    text-align: center;
+    width: 100%;
+    font-size: 1.5rem;
+    position: fixed;
+    bottom: 0;
+}
+
+.redes img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+@media (min-width:900px) {
+    .content {
+        width: 45%;
+        height: 60%;
+        padding: 2rem 4rem;
+    }
+    .title {
+        top: 5%;
+        left: 26%;
+    }
+}
