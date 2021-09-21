@@ -11,7 +11,10 @@ menu.addEventListener("click", function() {
 
 let perfil = document.getElementById("btn-perfil");
 perfil.addEventListener("click", function() {
+    // let imagen = this.getElementsByTagName("img");
+    // imagen.setAttribute("src", "img/login-blanco.jpg");
     let hd_perfil = document.getElementById("header-perfil");
+
     if (hd_perfil.style.display == "none") {
         hd_perfil.style.display = "flex";
     } else {
