@@ -78,7 +78,11 @@ body {
 }
 
 @media (min-width:1000px) {
+    .header-hp {
+        height: 4rem;
+    }
     .footer {
+        height: 4rem;
         font-size: 2rem;
     }
     .redes img {
