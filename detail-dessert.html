@@ -4,16 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Healthy Desserts</title>
-    <link rel="stylesheet" href="css/styles-desserts.css">
+    <link rel="stylesheet" href="css/styles-detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
     <meta name="viweport" content="width=device-width, user-scalable=no, 
         initial-scale= 1.0, maximum-scale=1.0, minimum-scale=1.0">
     <!-- <script src="js/script.js" defer></script> -->
     <script src="js/events-desserts.js" defer></script>
-    <script src="js/search.js" defer></script>
+    <script src="js/events-details.js" defer></script>
+
+
 
 </head>
 
-<body class="background">
+<body>
 
     <header class="header">
         <img src="img/icono-pasteleria.png" id="logo" />
@@ -23,13 +26,15 @@
 
         <div class="">
             <div class="header-usuario d-flex row-center">
-                <button type="button" id="btn-perfil"> <img src="img/login.png" id="img-usuario"/></button>
+                <button type="button" id="btn-perfil"> </button>
                 <h3> USUARIO</h3>
             </div>
             <div class="header-perfil d-flex col-center " id="header-perfil">
                 <a href="#" class="d-flex col-center " id="aaa">Perfil</a>
                 <a href="index.html" class="d-flex col-center">Logout</a>
                 <a href="#" class="d-flex col-center">Contact US</a>
+                <a href="#" class="d-flex col-center"> Shopping History</a>
+                <a href="#" class="d-flex col-center"> Register</a>
             </div>
 
         </div>
@@ -38,15 +43,19 @@
     <div class="menu d-flex ">
         <div class="menu-buscador d-flex">
             <div class="menu-hamburger d-flex ">
-                <button type="button" class="hamburger" id="hamburger"> <img src="img/icono-menu.png" id="icono-menu" >
+                <button type="button" class="hamburger" id="hamburger"></button>
             </div>
             <div class="search">
                 <input type="text" class="filter" id="filter" placeholder="Buscar..." onkeyup="searchDessert();">
             </div>
+            <div class=" menu-shop-wish d-flex ">
+                <button type="button" class="btn-action-menu d-flex row-center" id="shop"> <img src="img/carros.png" >CANT </button>
+                <button type="button" class="btn-action-menu d-flex row-center" id="wishes-list"> <img src="img/lista-de-deseos.png" > CANT </button>
+            </div>
         </div>
-           
-        <div class="nav d-flex row-center" id="nav" >
-           
+
+        <div class="nav d-flex row-center" id="nav">
+
             <a href="#" class="menu-item ">All Deserts</a>
             <a href="#" class="menu-item ">Cakes</a>
             <a href="#" class="menu-item">Cupcakes</a>
@@ -54,18 +63,59 @@
             <a href="#" class="menu-item ">Crumble Cakes</a>
             <a href="#" class="menu-item ">Custards</a>
         </div>
-    </div>   
-        
+    </div>
+    <div class=" container d-flex row-center">
+        <div class=" images d-flex col-center">
+            <div>
+                <img src=" img/img-desserts/bizcocho-avena-zanahoria-almendra.jpg">
+            </div>
+            <div class=" imageSmall d-flex row-center">
+                <img src="img/img-desserts/bizcocho.jpg">
+                <img src="img/img-desserts/bizcocho.jpg">
+                <img src="img/img-desserts/bizcocho.jpg">
+                <img src="img/img-desserts/bizcocho.jpg">
+                <img src="img/img-desserts/bizcocho.jpg">
+            </div>
+        </div>
+        <div class="description d-flex col-center">
+            <h3> Healthy Carrot Cake</h3>
+            <div class="d-flex row-center">
+                <p>PRICE :</p>
+                <div class="price"> $ 200</div>
+            </div>
+            <div>
+                <button type="button" class="arrowLeft"><i class="fas fa-arrow-circle-left"></i></button>
+                <span> Cant</span>
+                <button type="button" class="arrowRight"> <i class="fas fa-arrow-circle-right"></i></button>
+                <span>Portions</span>
+            </div>
 
-    <footer class="footer">
-        <div>
-            Healthy Desserts
+            <div>
+                <button type="button" class="arrowLeft"> <i class="fas fa-arrow-circle-left"></i></button>
+                <span> Cant</span>
+                <button type="button" class="arrowRight"> <i class="fas fa-arrow-circle-right"></i></button>
+                <span>Stock</span>
+            </div>
+
+            <div>
+                <p>Description</p>
+                <ul>
+                    <li>Ingredients</li>
+                    <li>Ingredients</li>
+                    <li>Ingredients</li>
+                    <li>Ingredients</li>
+                </ul>
+            </div>
+            <div>
+                <span> Contact Us</span>
+                <div class="js-social-networks">
+
+                </div>
+            </div>
+
         </div>
-        <div class="redes">
-            <img src="img/facebook.png" alt="facebook" />
-            <img src="img/youtube.png" alt="youtube" />
-            <img src="img/twiter.png" alt="twiter" />
-            <img src="img/instagram.png" alt="instagram" />
-        </div>
-    </footer>
+    </div>
+
 </body>
+
+</html>
