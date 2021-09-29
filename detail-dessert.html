@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Healthy Desserts</title>
+    <link rel="stylesheet" href="css/styles-desserts.css">
+    <meta name="viweport" content="width=device-width, user-scalable=no, 
+        initial-scale= 1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- <script src="js/script.js" defer></script> -->
+    <script src="js/events-desserts.js" defer></script>
+    <script src="js/search.js" defer></script>
+
+</head>
+
+<body class="background">
+
+    <header class="header">
+        <img src="img/icono-pasteleria.png" id="logo" />
+        <div class="title">
+            <h1 id="header-title"> Healthy Desserts</h1>
+        </div>
+
+        <div class="">
+            <div class="header-usuario d-flex row-center">
+                <button type="button" id="btn-perfil"> <img src="img/login.png" id="img-usuario"/></button>
+                <h3> USUARIO</h3>
+            </div>
+            <div class="header-perfil d-flex col-center " id="header-perfil">
+                <a href="#" class="d-flex col-center " id="aaa">Perfil</a>
+                <a href="index.html" class="d-flex col-center">Logout</a>
+                <a href="#" class="d-flex col-center">Contact US</a>
+            </div>
+
+        </div>
+
+    </header>
+    <div class="menu d-flex ">
+        <div class="menu-buscador d-flex">
+            <div class="menu-hamburger d-flex ">
+                <button type="button" class="hamburger" id="hamburger"> <img src="img/icono-menu.png" id="icono-menu" >
+            </div>
+            <div class="search">
+                <input type="text" class="filter" id="filter" placeholder="Buscar..." onkeyup="searchDessert();">
+            </div>
+        </div>
+           
+        <div class="nav d-flex row-center" id="nav" >
+           
+            <a href="#" class="menu-item ">All Deserts</a>
+            <a href="#" class="menu-item ">Cakes</a>
+            <a href="#" class="menu-item">Cupcakes</a>
+            <a href="#" class="menu-item ">Pancakes</a>
+            <a href="#" class="menu-item ">Crumble Cakes</a>
+            <a href="#" class="menu-item ">Custards</a>
+        </div>
+    </div>   
+        
+
+    <footer class="footer">
+        <div>
+            Healthy Desserts
+        </div>
+        <div class="redes">
+            <img src="img/facebook.png" alt="facebook" />
+            <img src="img/youtube.png" alt="youtube" />
+            <img src="img/twiter.png" alt="twiter" />
+            <img src="img/instagram.png" alt="instagram" />
+        </div>
+    </footer>
+</body>

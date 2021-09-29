@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.row-center {
+    flex-direction: row;
+    justify-content: center;
+}
+
+.col-center {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.background-hp {
+    background-image: radial-gradient(rgba(160, 65, 2, 0.467), rgba(0, 0, 0, 0.5)), url("../img/fondo-hp2.jpg");
+}
+
+.header-hp {
+    height: 7rem;
+    background-color: #EEC170;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    text-align: center;
+    font-family: 'Ephesis', cursive;
+    font-size: 6rem;
+    color: #F2EADC;
+    margin-top: 0;
+    font-weight: 400;
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+.boton button {
+    border-radius: 10px;
+    color: white;
+    margin-top: 10%;
+    align-self: center;
+    text-decoration: none;
+    font-family: 'Ephesis';
+    padding: 1rem;
+    width: 25rem;
+    font-weight: 550;
+    font-size: 5rem;
+    background-color: rgba(123, 73, 7, 0.248);
+    border-radius: 1rem;
+    box-shadow: 2px 2px 2px black;
+    transition: 0.25s;
+}
+
+.boton button:hover {
+    color: black;
+    background-color: #7b2c1060;
+}
+
+.footer {
+    align-self: flex-end;
+    background-color: #EEC170;
+    text-align: center;
+    width: 100%;
+    font-size: 3rem;
+    position: fixed;
+    bottom: 0;
+}
+
+.redes img {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+@media (min-width:1000px) {
+    .header-hp {
+        height: 4rem;
+    }
+    .footer {
+        height: 4rem;
+        font-size: 2rem;
+    }
+    .redes img {
+        width: 2rem;
+        height: 2rem;
+    }
+    .title {
+        font-size: 4rem;
+    }
+    .boton button {
+        width: 20rem;
+        font-size: 3.5rem;
+        margin-top: 0%;
+    }
+}

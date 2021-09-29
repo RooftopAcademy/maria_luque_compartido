@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Healthy Desserts</title>
+    <link rel="stylesheet" href="css/styles-desserts.css">
+    <meta name="viweport" content="width=device-width, user-scalable=no, 
+        initial-scale= 1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- <script src="js/script.js" defer></script> -->
+    <script src="js/events-desserts.js" defer></script>
+    <script src="js/search.js" defer></script>
+    <script src="js/type_dessert.js" defer></script>
+
+</head>
+
+<body class="background">
+
+    <header class="header">
+        <img src="img/icono-pasteleria.png" id="logo" />
+        <div class="title">
+            <h1 id="header-title"> Healthy Desserts</h1>
+        </div>
+
+        <div class="">
+            <div class="header-usuario d-flex row-center">
+                <button type="button" id="btn-perfil"> <img src="img/login.png" id="img-usuario"/></button>
+                <h3> USUARIO</h3>
+            </div>
+            <div class="header-perfil d-flex col-center " id="header-perfil">
+                <a href="#" class="d-flex col-center " id="aaa">Perfil</a>
+                <a href="index.html" class="d-flex col-center">Logout</a>
+                <a href="#" class="d-flex col-center">Contact US</a>
+            </div>
+
+        </div>
+
+    </header>
+    <div class="menu d-flex ">
+        <div class="menu-buscador d-flex">
+            <div class="menu-hamburger d-flex ">
+                <button type="button" class="hamburger" id="hamburger"> <img src="img/icono-menu.png" id="icono-menu" >
+            </div>
+            <div class="search">
+                <input type="text" class="filter" id="filter" placeholder="Buscar..." onkeyup="searchDessert();">
+            </div>
+        </div>
+           
+        <div class="nav d-flex row-center" id="nav" >
+           
+            <a href="#" class="menu-item ">All Deserts</a>
+            <a href="#" class="menu-item ">Cakes</a>
+            <a href="#" class="menu-item">Cupcakes</a>
+            <a href="#" class="menu-item ">Pancakes</a>
+            <a href="#" class="menu-item ">Crumble Cakes</a>
+            <a href="#" class="menu-item ">Custards</a>
+        </div>
+    </div>   
+        
+    <div class="main">
+        <aside>
+            <a href="#" class="menu-item d-flex col-center">All Deserts</a>
+            <a href="#" class="menu-item d-flex col-center">Cakes</a>
+            <a href="#" class="menu-item d-flex col-center">Cupcakes</a>
+            <a href="#" class="menu-item d-flex col-center">Pancakes</a>
+            <a href="#" class="menu-item d-flex col-center">Crumble Cakes</a>
+            <a href="#" class="menu-item d-flex col-center">Custards</a>
+            <a href="#" class="menu-item d-flex col-center">Others</a>
+
+        </aside>
+        <div class="desserts d-flex row-center" id="desserts-list">
+            <div class="dessert-card pancake" id="pancake">
+                <img src="img/img-desserts/panqueques.jpg">
+                <div class="card-body">
+                    <h4 class="titleCard">Panqueques</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <button class="button-card">View More </button>
+            </div>
+        </div>
+
+        <div class="dessert-card cupcake" id="carrot-cupcake">
+            <img src="img/img-desserts/bizcocho-avena-zanahoria-almendra.jpg">
+            <div class="card-body">
+                <h4 class="titleCard">Bizcocho de Zanahoria </h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                <button class="button-card">View More </button>
+            </div>
+        </div>
+
+        <div class="dessert-card cupcake" id="lemon-cupcake">
+            <div class="card-body">
+                <img src="img/img-desserts/bizcocho-limon.jpg">
+                <h4 class="titleCard">Bizcocho de Limón</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                <button class="button-card">View More </button>
+            </div>
+        </div>
+
+        <div class="dessert-card cupcake" id="orange-cupcake">
+            <img src="img/img-desserts/bizcocho-naranja.jpg">
+            <div class="card-body">
+                <h4 class="titleCard">Bizcocho de Naranja</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <button class="button-card">View More </button>
+            </div>
+
+        </div>
+        <div class="dessert-card cupcake" id="vanilla-cupcake">
+            <img src="img/img-desserts/bizcocho.jpg">
+            <div class="card-body">
+                <h4 class="titleCard">Bizcocho de Vainilla</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <button class="button-card">View More </button>
+            </div>
+        </div>
+
+        <div class="dessert-card brownie" id="cookie-brownie">
+            <img src="img/img-desserts/brownie-galleta.jpg">
+            <div class="card-body">
+                <h4 class="titleCard">Brownie de Galleta</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <button class="button-card">View More </button>
+            </div>
+        </div>
+
+        <div class="dessert-card brownie" id="pear-brownie">
+            <img src="img/img-desserts/brownie-pera.jpg">
+            <div class="card-body">
+                <h4 class="titleCard">Brownie de Pera</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                <button class="button-card">View More </button>
+            </div>
+
+        </div>
+        <div class="dessert-card brownie" id="banana-brownie">
+            <img src="img/img-desserts/brownie-platano.jpg">
+            <div class="card-body">
+                <h4 class="titleCard">Brownie de Plátano</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                <button class="button-card">View More </button>
+            </div>
+        </div>
+        <div class="dessert-card cake" id="mango-crumble-cake">
+            <img src="img/img-desserts/crumble-mango.jpg">
+            <div class="card-body">
+                <h4 class="titleCard">Crumble de Mango</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                <button class="button-card">View More </button>
+            </div>
+        </div>
+        <div class="dessert-card cake" id="apple-crumble-cake">
+            <img src="img/img-desserts/crumble-manzana.jpg">
+            <div class="card-body">
+                <h4 class="titleCard">Crumble de Manzana</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                <button class="button-card">View More </button>
+            </div>
+        </div>
+        <div class="dessert-card custard" id="coffee-custard">
+            <img src="img/img-desserts/flan-cafe.jpg">
+            <div class="card-body">
+                <h4 class="titleCard">Flan de Café</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                <button class="button-card">View More </button>
+            </div>
+        </div>
+        <div class="dessert-card custard" id="chocolate-custard">
+            <img src="img/img-desserts/flan-chocolate.jpg">
+            <div class="card-body">
+                <h4 class="titleCard">Flan de Chocolate </h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <button class="button-card">View More </button>
+            </div>
+        </div>
+        <div class="dessert-card custard" id="apple-custard">
+            <img src="img/img-desserts/flan-manzana.jpg">
+            <div class="card-body">
+                <h4 class="titleCard">Flan de Manzana</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                <button class="button-card">View More </button>
+            </div>
+        </div>
+        <div class="dessert-card mousse" id="chocolate-mousse">
+            <img src="img/img-desserts/mousse-chocolate.jpg">
+            <div class="card-body">
+                <h4 class="titleCard">Mousse de Chocolate</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                <button class="button-card">View More </button>
+            </div>
+        </div>
+        <div class="dessert-card cake" id="frost-cake">
+            <img src="img/img-desserts/tarta-helada.jpg">
+            <div class="card-body">
+                <h4 class="titleCard">Tarta Helada</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                <button class="button-card">View More </button>
+            </div>
+        </div>
+        <div class="dessert-card cake" id="apple-cake">
+            <img src="img/img-desserts/tarta-manzana.jpg">
+            <div class="card-body">
+                <h4 class="titleCard">Tarta de Manzana</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                <button class="button-card">View More </button>
+            </div>
+        </div>
+
+        <div class="dessert-card cake" id="lemon-marcarpone-cake">
+            <img src="img/img-desserts/tarta-mascarpone-limon.jpg">
+            <div class="card-body">
+                <h4 class="titleCard">Tarta Mascarpone de Limón</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+                <button class="button-card">View More </button>
+            </div>
+        </div>
+        <div class="dessert-card cake" id="pineapple-cake">
+            <img src="img/img-desserts/tarta-queso-piña.jpg">
+            <div class="card-body">
+                <h4 class="titleCard">Tarta de Queso y Piña</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <button class="button-card">View More </button>
+            </div>
+        </div>
+        <div class="dessert-card cake" id="cheese-cake">
+            <img src="img/img-desserts/tarta-queso.jpg">
+            <div class="card-body">
+                <h4 class="titleCard">Tarta de Queso tradicional</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <button class="button-card">View More </button>
+            </div>
+        </div>
+    </div>
+    <footer class="footer d-flex col-center">
+        <div>
+            Healthy Desserts
+        </div>
+        <div class="redes">
+            <img src="img/facebook.png" alt="facebook" />
+            <img src="img/youtube.png" alt="youtube" />
+            <img src="img/twiter.png" alt="twiter" />
+            <img src="img/instagram.png" alt="instagram" />
+        </div>
+    </footer>
+</body>
+
+</html>
