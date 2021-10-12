@@ -4,26 +4,29 @@
 
 //-----CLICK EVENTS IN IMG PROFILE AND HAMBURGER MENU
 
+// let menu = document.getElementById("hamburger");
+// menu.addEventListener("click", function() {
+//     let nav = document.getElementById("nav");
+//     nav.classList.toggle('d-none');
+//     nav.classList.toggle('d-flex');
+// });
 let menu = document.getElementById("hamburger");
 menu.addEventListener("click", function() {
-    let nav = document.getElementById("nav");
-    if (nav.style.display == "none") {
-        nav.style.display = "flex";
-    } else {
-        nav.style.display = "none";
+    let main=document.getElementById("main");
+    let aside = document.getElementById("aside");
+    if(main.classList.contains('row-center')) {
+        main.setAttribute('class','col-center');
+        aside.setAttribute('class','d-flex col-center')
     }
-
+    aside.classList.toggle('d-none')
+    
 });
 
 let perfil = document.getElementById("btn-perfil");
 perfil.addEventListener("click", function() {
     let hd_perfil = document.getElementById("header-perfil");
-
-    if (hd_perfil.style.display == "none") {
-        hd_perfil.style.display = "flex";
-    } else {
-        hd_perfil.style.display = "none";
-    }
+    hd_perfil.classList.toggle('d-none');
+    hd_perfil.classList.toggle('d-flex');
 });
 
 //---- MOUSEOVER AND MOUSEOUT EVENT IN MENU ITEMS
@@ -43,6 +46,3 @@ menuItem.forEach(element => {
         element.style.textShadow = "";
     })
 });
-
-
-/*  ----EVENTOS DE INFORMACIÓN */

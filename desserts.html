@@ -30,7 +30,7 @@
 <body class="background">
 
     <header class="header">
-        <img src="img/icono-pasteleria.png" id="logo" />
+        <a href= "index.html"><img src="img/icono-pasteleria.png" id="logo" /></a>
         <div class="title">
             <h1 id="header-title"> Healthy Desserts</h1>
         </div>
@@ -40,7 +40,7 @@
                 <button type="button" id="btn-perfil"> <img src="img/login.png" id="img-usuario"/></button>
                 <h3> USUARIO</h3>
             </div>
-            <div class="header-perfil d-flex col-center " id="header-perfil">
+            <div class="header-perfil d-none  col-center " id="header-perfil">
                 <a href="#" class="d-flex col-center " id="aaa">Perfil</a>
                 <a href="index.html" class="d-flex col-center">Logout</a>
                 <a href="#" class="d-flex col-center">Contact US</a>
@@ -60,25 +60,16 @@
                 <input type="text" class="filter" id="filter" placeholder="Buscar..." onkeyup="searchDessert();">
             </div>
             <div class=" menu-shop-wish d-flex ">
-                <button type="button" class="btn-action-menu d-flex row-center" id="shop"> <img src="img/carros.png" >CANT </button>
-                <button type="button" class="btn-action-menu d-flex row-center" id="wishes-list"> <img src="img/lista-de-deseos.png" > CANT </button>
+                <div class="btn-action-menu d-flex row-center" id="shop"> <img src="img/bienes.png" > 0 </div>
+                <div class="btn-action-menu d-flex row-center" id="wishes-list"> <img src="img/lista-de-deseos.png" > 0 </div>
             </div>
         </div>
 
-        <div class="nav d-flex row-center" id="nav">
-
-            <a href="#" class="menu-item ">All Deserts</a>
-            <a href="#" class="menu-item ">Cakes</a>
-            <a href="#" class="menu-item">Cupcakes</a>
-            <a href="#" class="menu-item ">Pancakes</a>
-            <a href="#" class="menu-item ">Crumble Cakes</a>
-            <a href="#" class="menu-item ">Custards</a>
-        </div>
     </div>
 
-    <main>
+    <main class="d-flex row-center"id="main">
 
-        <aside class="js-menu-aside">
+        <aside class="js-menu-aside  "id="aside">
             <a href="#" class="menu-item d-flex col-center">All Deserts</a>
             <a href="#" class="menu-item d-flex col-center">Cakes</a>
             <a href="#" class="menu-item d-flex col-center">Cupcakes</a>
@@ -96,7 +87,7 @@
         <div>
             Healthy Desserts
         </div>
-        <div class="redes js-social-networks">
+        <div class="networks js-social-networks" id="networks">
 
         </div>
     </footer>

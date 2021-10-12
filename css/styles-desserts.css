@@ -13,7 +13,9 @@ body {
 .d-flex {
     display: flex;
 }
-
+.d-none{
+    display: none;
+}
 .row-center {
     flex-direction: row;
     justify-content: center;
@@ -64,7 +66,6 @@ html {
 }
 
 .header-perfil {
-    display: none;
     position: absolute;
     z-index: 10000;
 }
@@ -139,18 +140,19 @@ html {
 
 .btn-action-menu {
     height: 5rem;
+    width: 50%;
     align-items: center;
-    /* margin: 0 1rem; */
-    align-items: center;
-    margin: 0rem 1.5rem;
+    color: white;
+    font-family: Tahoma, sans-serif;
+    font-size: 1.5rem;
     justify-content: center;
-    border-radius: 1.6rem;
-    background-color: rgb(231 146 58 / 38%);
+    border-color: none;
     z-index: 501;
 }
 
 .btn-action-menu img {
     height: 4.5rem;
+    margin-right: 0.5rem;
 }
 
 .search {
@@ -159,34 +161,24 @@ html {
 }
 
 .menu-item {
-    width: 15%;
     height: 3.5rem;
     border-radius: 5px;
-    padding-bottom: 1rem;
-    padding-left: 0.7rem;
-    padding-right: 0.7rem;
+    padding: 1.5rem 1rem 1.5rem 1rem;
     margin: 0.2rem;
     border: #EEC170 solid;
     text-align: center;
     justify-content: center;
     background-color: #c98749;
     color: cornsilk;
-    font-size: 2rem;
+    font-size: 2.3rem;
     text-decoration: none;
 }
 
 .menu-shop-wish {
-    /* width: 10rem; */
-    justify-content: flex-end;
+    width: 30%;
+    justify-content:center;
     z-index: 501;
 }
-
-
-/* 
-.menu-item:hover {
-    background-color: #FF9F1C;
-    text-shadow: 2px 2px 2px black;
-} */
 
 .nav {
     width: 100%;
@@ -196,14 +188,8 @@ html {
 }
 
 main {
-    display: flex;
     flex-direction: column;
-    /* padding-top: 5rem; */
     padding-bottom: 5rem;
-}
-
-aside {
-    display: none;
 }
 
 .desserts {
@@ -302,7 +288,10 @@ aside {
     background: transparent;
     border: transparent;
 }
-
+aside{
+    display: none;
+    flex-direction: column;
+}
 .btn-action-wishes img {
     height: 5rem;
 }
@@ -317,17 +306,18 @@ aside {
     bottom: 0;
 }
 
-.redes img {
+.networks img {
     width: 2.5rem;
     height: 2.5rem;
 }
 
 @media (min-width:1280px) {
-    .nav {
-        display: none;
+    main{
+        justify-content: center;
+        flex-direction: row;
     }
     aside {
-        display: list-item;
+        display:flex;
         width: 30%;
         background-color: rgba(178, 88, 19, 0.7);
     }
