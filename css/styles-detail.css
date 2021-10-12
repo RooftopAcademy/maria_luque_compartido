@@ -13,7 +13,9 @@ body {
     position: fixed;
     text-align: center;
 }
-
+.d-none{
+    display: none;
+}
 .d-flex {
     display: flex;
 }
@@ -58,17 +60,6 @@ html {
     text-shadow: 2px 2px 3px black;
 }
 
-.imageSmall img {
-    width: 6rem;
-    height: 6rem;
-    margin: 1rem 1rem;
-}
-
-.hamburger-size {
-    width: 4rem;
-    height: 4rem;
-}
-
 .header-perfil {
     display: none;
     position: absolute;
@@ -103,11 +94,7 @@ html {
     margin-top: 2px;
 }
 
-.hamburger {
-    background-color: transparent;
-    border-radius: 1rem;
-    margin: 0.5rem 0.5rem;
-}
+
 
 .filter {
     background-color: rgba(255, 255, 255, 0.1);
@@ -123,35 +110,43 @@ html {
 }
 
 .menu {
-    flex-direction: column;
-    height: 5rem;
-    width: 100%;
-    background-color: #5b3924;
-    align-items: center;
-    justify-content: center;
-    z-index: 500;
-}
-
-.menu-buscador {
-    width: 100%;
     flex-direction: row;
     align-items: center;
+    height: 5.5rem;
+    width: 100%;
     justify-content: right;
+    background-color: #5b3924;
+    z-index: 500;
 }
-
-.menu-hamburger {
-    align-items: flex-end;
+.back-catalog{
+    width: 15%;
+}
+.btn-back-catalog{
+    padding:0;
+    margin:1rem;
+    background-color: transparent;
+    
+}
+.fa-solid{
+    font-size: 3rem;
+    color:white;
+    background-color:transparent;
+}
+.fas{
+    font-size: 2rem;
+}
+.quantify, .quantify-title{
+    font-size: 2rem;
+    margin: 1rem;
 }
 
 .btn-action-menu {
     height: 5rem;
     align-items: center;
-    /* margin: 0 1rem; */
     align-items: center;
     margin: 0rem 1.5rem;
     justify-content: center;
     border-radius: 1.6rem;
-    background-color: rgb(231 146 58 / 38%);
     z-index: 501;
 }
 
@@ -159,62 +154,85 @@ html {
     height: 4.5rem;
 }
 
-.search {
-    justify-items: center;
-    /* margin-left: 10%; */
-}
-
-.menu-item {
-    width: 15%;
-    height: 3.5rem;
-    border-radius: 5px;
-    padding-bottom: 1rem;
-    padding-left: 0.7rem;
-    padding-right: 0.7rem;
-    margin: 0.2rem;
-    border: #EEC170 solid;
-    text-align: center;
-    justify-content: center;
-    background-color: #c98749;
-    color: cornsilk;
-    font-size: 2rem;
-    text-decoration: none;
-}
 
 .menu-shop-wish {
-    /* width: 10rem; */
-    justify-content: flex-end;
+    width: 85%;
+    justify-content:right;
+    z-index: 501;
+}
+.btn-action-menu {
+    height: 5rem;
+    width: 15%;
+    align-items: center;
+    color: white;
+    font-family: Tahoma, sans-serif;
+    font-size: 1.5rem;
+    justify-content: center;
+    border-color: none;
     z-index: 501;
 }
 
-.nav {
+.btn-action-menu img {
+    height: 4.5rem;
+    margin-right: 0.5rem;
+}
+
+.container{
+    margin-top: 2rem;
+
+}
+.images{
+    align-items: center;
+}
+.imageBig img{
     width: 100%;
-    display: none;
-    justify-content: space-around;
-    z-index: 999;
+    height: 30rem;
+    border-radius: 25px;
+}
+.imageSmall{
+    height: 9.5rem;
+}
+.imageSmall img {
+    width: 8rem;
+    height: 8rem;
+    margin: 1rem 0.5rem;
+    border-radius: 15px;
+}
+.imageSmall img:hover {
+   width: 9rem;
+   height: 9rem;
+   transition: 0.5s;
+}
+.details {
+    text-align: center;
+}
+.title{
+    margin: 0;
+    font-size: 4rem;
+    font-family: 'Ephesis', cursive;
+}
+.price{
+    align-items: center;
+}
+.container-detail, .container-description{
+    background-color: rgba(255, 255, 255, 0.1);
+    margin:1rem;
+    border-radius: 15px;
+
+}
+.btn-submit-buy{
+    font-size: 2rem;
+    font-family: cursive ;
+    background-color:rgba(155, 80, 18, 0.623);
+    border-radius: 12px;
+    margin-bottom: 1rem;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    /* padding-top: 5rem; */
-    padding-bottom: 5rem;
-}
-
-@media (min-width:1280px) {
-    .nav {
-        display: none;
-    }
-    .menu-item {
-        width: 80%;
-        margin: 1rem;
-    }
-    .search {
+@media (min-width:1200px) {
+    .container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
         justify-content: center;
     }
-    .menu-hamburger {
-        display: none;
-    }
 }
-
-@media (min-width:1000px) {}

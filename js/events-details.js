@@ -1,4 +1,4 @@
-function modifyCant(value) {
+function modifyQuantity(value) {
     function increase() {
         value += 1;
         return value
@@ -21,46 +21,37 @@ function modifyCant(value) {
 
 function showSpan(element) {
     // primero busca el padre de btn y luego retorna el hijo span
-    let span = Array.from(element.parentElement.getElementsByClassName("js-cant"))
+    let span =element.parentElement.querySelector(".js-quantify");
     return span
 }
 
-//--INCREASE CANT
+//--DECREASE QUANTIFY 
 
-let btnLeft = Array.from(document.getElementsByClassName("js-arrowLeft"))
-console.log(btnLeft)
+let btnLeft = Array.from(document.getElementsByClassName("js-arrowLeft"));
 
 btnLeft.forEach((element) => {
-        // element.addEventListener("click", function() {
-        // let span = Array.from(element.parentElement.getElementsByClassName("js-cant"))
-        // console.log(span)
-
+        element.addEventListener("click", function() {
         let span = showSpan(element)
-
-        span.map(function(e) {
-            let value = parseInt(e.innerHTML);
-            span.innerHTML = modifyCant(value).increase()
-            return console.log(span.innerHTML)
-        })
-
+        let value=parseInt(span.innerHTML);
+        if(value==1){
+           element.previousElementSibling.classList.toggle('d-none')
+           setTimeout(()=>{
+            element.previousElementSibling.classList.toggle('d-none')
+           },1500)
+        } else {
+            span.innerHTML = modifyQuantity(value).decrease()
+        }
     })
-    // })
+})
 
-//---DECREASE CANT
-let btnRight = Array.from(document.getElementsByClassName("js-arrowLeft"))
-console.log(btnRight)
+let btnRight = Array.from(document.getElementsByClassName("js-arrowRight"));
 
 btnRight.forEach((element) => {
-        // element.addEventListener("click", function() {
-        // let span = Array.from(element.parentElement.getElementsByClassName("js-cant"))
-        // console.log(span)
+        element.addEventListener("click", function() {
         let span = showSpan(element)
-
-        span.map(function(e) {
-            let value = parseInt(e.innerHTML);
-            span.innerHTML = modifyCant(value).decrease()
-            return console.log(span.innerHTML)
-        })
-
+        let value=parseInt(span.innerHTML);
+        span.innerHTML = modifyQuantity(value).increase()
+        
     })
-    // })
+       
+})
