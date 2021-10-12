@@ -7,6 +7,8 @@ class DessertFactory {
         dessert.id = obj.id;
         dessert.image = obj.image;
         dessert.category = obj.category;
+        dessert.stock=obj.stock;
+        dessert.description=obj.description;
 
         return dessert
     }

@@ -7,6 +7,8 @@ renderListDesserts()
 addCartListener()
 store.fetchNetworks()
 renderListNetworks()
+renderDessertDetails()
+addCartDetailListener()
 
 /** RENDERIZAR LA LISTA DE DESSERTS */
 function renderListDesserts() {
@@ -17,16 +19,19 @@ function renderListDesserts() {
         })
 }
 
+
 function addCartListener() {
-    document.querySelectorAll('js-add-to-cart')
+    document.querySelectorAll('.js-add-to-cart')
         .forEach(btn => {
             btn.addEventListener('click', function() {
-
+                btn.style.background="black";
                 let dessert = catalog.findById(this.dataset.dessertId)
+                console.log(dessert)
                 store.getCart().addDessert(dessert)
+                
             })
 
-        });
+        })
 }
 
 /**RENDERIZAR LA LISTA DE REDES  */
@@ -38,5 +43,26 @@ function renderListNetworks() {
                 list.innerHTML += dessertNetworkView(network)
             })
 
+        })
+}
+/**RENDERIZAR LA LISTA DE REDES  */
+
+function renderDessertDetails(){
+    Array.from(document.getElementsByClassName('js-detail-dessert'))
+        .forEach((list)=>{
+            list.innerHTML+= dessertDetailView(catalog.showAll()[0])
+        })
+}
+
+function addCartDetailListener() {
+   let btn= document.querySelector('.js-add-cart')
+        btn.addEventListener('click', function() {
+            console.log(btn)
+            let dessert = catalog.findById(this.dataset.dessertId)
+            //AGREGAR QUE GUARDE CANTIDAD y agregue dessert con cantidad en shop
+            // let quantify=this.
+            console.log(dessert)
+            store.getCart().addDessert(dessert)
+            
         })
 }

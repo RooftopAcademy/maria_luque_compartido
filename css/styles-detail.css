@@ -215,7 +215,8 @@ html {
     align-items: center;
 }
 .container-detail, .container-description{
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgb(212 156 85);
+    box-shadow: 0.5rem 0.5rem rgb(124 74 10 / 94%);
     margin:1rem;
     border-radius: 15px;
 

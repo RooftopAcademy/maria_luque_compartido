@@ -1,6 +1,7 @@
 class User {
     constructor() {
         this._name = String;
+        this._email=String;
         this._id = Number;
         this._usuario = String;
         this._contrasenia = String;
@@ -9,6 +10,9 @@ class User {
     }
     get name() {
         return this._name;
+    }
+    get email() {
+        return this._email;
     }
     get id() {
         return this._id;

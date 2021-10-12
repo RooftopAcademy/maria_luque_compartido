@@ -3,9 +3,10 @@ class Dessert {
             this._name = String;
             this._id = Number;
             this._price = Number;
-            this._description = String;
+            this._description = [];
             this._stock = Number;
             this._image = String;
+            this._imagesSmall=[]
             this._category = String;
         }
         // setters
@@ -56,16 +57,3 @@ class Dessert {
         console.log(`Name: ${this._name}, Id: ${this._id}, Price: ${this._price} , Stock: ${this._stock},Category: ${this._category}`)
     }
 }
-
-// class CrumbleDessert extends Dessert {
-// }
-// class CustardDessert extends Dessert {
-// }
-// class CupcakeDessert extends Dessert {
-// }
-// class CakeDessert extends Dessert {
-// }
-// class CustardDessert extends Dessert {
-// }
-// class CrumbleDessert extends Dessert {
-// }
