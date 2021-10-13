@@ -19,12 +19,39 @@ function renderListDesserts() {
         })
 }
 
+function modifyQuantity(value) {
+    function increase() {
+        value += 1;
+        return value
+    }
+
+    function decrease() {
+        if (value > 0) {
+            value -= 1;
+            return value
+        } else {
+            return value
+        }
+    }
+    return {
+        increase,
+        decrease
+    }
+
+}
 
 function addCartListener() {
     document.querySelectorAll('.js-add-to-cart')
         .forEach(btn => {
             btn.addEventListener('click', function() {
-                btn.style.background="black";
+                btn.firstElementChild.setAttribute('src','img/buy_icon.png')
+                //modifica cantidad del contador
+                let quantity= document.getElementById('shop')
+                let value=parseInt(quantity.innerHTML)
+                // quantity.innerHTML = modifyQuantity(value).increase()
+                quantity.innerHTML=modifyQuantity(parseInt(quantity.value)).increase()
+                console.log(modifyQuantity(value).increase())
+                //Agrega dessert al carrito
                 let dessert = catalog.findById(this.dataset.dessertId)
                 console.log(dessert)
                 store.getCart().addDessert(dessert)
@@ -45,7 +72,7 @@ function renderListNetworks() {
 
         })
 }
-/**RENDERIZAR LA LISTA DE REDES  */
+/**RENDERIZAR DETAILS-DESSERT  */
 
 function renderDessertDetails(){
     Array.from(document.getElementsByClassName('js-detail-dessert'))
