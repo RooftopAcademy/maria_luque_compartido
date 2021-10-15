@@ -30,7 +30,7 @@ function dessertDetailView(dessert) {
     
                 <div class="unity">
                     <span class="d-none message"> Minimun Unity possible</span>
-                    <button type="button " class="js-arrowLeft "> <i class="fas fa-arrow-circle-left "></i></button>
+                    <button type="button " class="js-arrowLeft " data-arrow-left="arrowLeft"> <i class="fas fa-arrow-circle-left "></i></button>
                     <span class="quantify js-quantify "> 1</span>
                     <button type="button " class="js-arrowRight "> <i class="fas fa-arrow-circle-right "></i></button>
                     <span class="quantify-title">Unities</span>

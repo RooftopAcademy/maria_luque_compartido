@@ -1,3 +1,4 @@
+
 let store = new Store
 let catalog = store.getCatalog()
 let footer = store.getFooter()
@@ -10,6 +11,8 @@ renderListNetworks()
 renderDessertDetails()
 addCartDetailListener()
 
+
+
 /** RENDERIZAR LA LISTA DE DESSERTS */
 function renderListDesserts() {
     Array.from(document.getElementsByClassName('js-desserts-list'))
@@ -19,26 +22,6 @@ function renderListDesserts() {
         })
 }
 
-function modifyQuantity(value) {
-    function increase() {
-        value += 1;
-        return value
-    }
-
-    function decrease() {
-        if (value > 0) {
-            value -= 1;
-            return value
-        } else {
-            return value
-        }
-    }
-    return {
-        increase,
-        decrease
-    }
-
-}
 
 function addCartListener() {
     document.querySelectorAll('.js-add-to-cart')
@@ -49,9 +32,9 @@ function addCartListener() {
                 let quantity= document.getElementById('shop')
                 let value=parseInt(quantity.innerHTML)
                 // quantity.innerHTML = modifyQuantity(value).increase()
-                quantity.innerHTML=modifyQuantity(parseInt(quantity.value)).increase()
-                console.log(modifyQuantity(value).increase())
-                //Agrega dessert al carrito
+                // quantity.innerHTML=modifyQuantity(parseInt(quantity.value)).increase()
+                // console.log(modifyQuantity(value).increase())
+                // //Agrega dessert al carrito
                 let dessert = catalog.findById(this.dataset.dessertId)
                 console.log(dessert)
                 store.getCart().addDessert(dessert)
@@ -72,6 +55,7 @@ function renderListNetworks() {
 
         })
 }
+
 /**RENDERIZAR DETAILS-DESSERT  */
 
 function renderDessertDetails(){

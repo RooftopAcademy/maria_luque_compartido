@@ -26,9 +26,10 @@ function showSpan(element) {
 }
 
 //--DECREASE QUANTIFY 
-
-let btnLeft = Array.from(document.getElementsByClassName("js-arrowLeft"));
-
+let container=document.getElementsByClassName("js-detail-dessert")
+console.log(container)
+let btnLeft = Array.from(container.getElementsByClassName("js-arrowLeft"));
+console.log( btnLeft)
 btnLeft.forEach((element) => {
         element.addEventListener("click", function() {
         let span = showSpan(element)
@@ -45,7 +46,7 @@ btnLeft.forEach((element) => {
 })
 
 let btnRight = Array.from(document.getElementsByClassName("js-arrowRight"));
-
+//--INCREASE QUANTIFY 
 btnRight.forEach((element) => {
         element.addEventListener("click", function() {
         let span = showSpan(element)
