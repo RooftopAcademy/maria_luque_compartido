@@ -1,15 +1,7 @@
-/*
------MOUSE EVENTS------
-*/
 
-//-----CLICK EVENTS IN IMG PROFILE AND HAMBURGER MENU
 
-// let menu = document.getElementById("hamburger");
-// menu.addEventListener("click", function() {
-//     let nav = document.getElementById("nav");
-//     nav.classList.toggle('d-none');
-//     nav.classList.toggle('d-flex');
-// });
+/**CLICK EVENTS IN IMG PROFILE AND HAMBURGER MENU*/
+
 let menu = document.getElementById("hamburger");
 menu.addEventListener("click", function() {
     let main=document.getElementById("main");
@@ -29,7 +21,7 @@ perfil.addEventListener("click", function() {
     hd_perfil.classList.toggle('d-flex');
 });
 
-//---- MOUSEOVER AND MOUSEOUT EVENT IN MENU ITEMS
+/**  MOUSEOVER AND MOUSEOUT EVENT IN MENU ITEMS*/
 
 let menuItem = document.querySelectorAll(".menu-item");
 
@@ -46,3 +38,32 @@ menuItem.forEach(element => {
         element.style.textShadow = "";
     })
 });
+
+/**FILTER DESSERTS BY CATEGORY */
+
+menuItem.forEach(btn => {
+    btn.addEventListener('click', function() {
+        let category = this.dataset.dessertCategory.toUpperCase()
+        let filterCards=catalog.findByCategory(category)
+
+        if(category !="ALL DESSERTS"){
+            renderListCategoryDesserts(filterCards)
+        }else{
+            console.log( catalog.showAll())
+            renderListDesserts()
+ }
+})
+})
+function renderListCategoryDesserts(dessertsFilter) {
+    let desserts=[]
+    Array.from(document.getElementsByClassName('js-desserts-list'))
+        .forEach((list) => {
+            list.innerHTML = dessertsList(dessertsFilter)
+
+        })
+}
+
+
+
+
+

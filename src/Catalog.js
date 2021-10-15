@@ -18,17 +18,11 @@ class Catalog {
         })
     }
 //Busca por Categoria
-    findByCategory(category){
-        return this.desserts.find( des=>{
-            // console.log(des)
-            // console.log(category)
-            // console.log(des.category.toUpperCase())
-        //    if (des.category.toUpperCase()==category){
-               return des.category.toUpperCase()==category
-           
-
-            // console.log("soy un dessert que coincide")
-            // return des.category.toUpperCase() === category;
-        })
+    findByCategory(cat){
+      return  this.desserts.filter(function(des){
+            if(des.category.toUpperCase()==cat){
+                return des;
+            }
+        });
     }
 }
